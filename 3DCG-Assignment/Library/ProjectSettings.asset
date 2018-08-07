@@ -648,9 +648,9 @@ PlayerSettings:
     UNet: 1
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
-  cloudProjectId: 556462af-1118-47cd-b253-4e9f670718a5
+  cloudProjectId: 7d7eb966-5c3b-426d-b5f3-7146db9310fd
   projectName: 3DCG-Assignment
-  organizationId: chinjl
+  organizationId: syncstelar
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
