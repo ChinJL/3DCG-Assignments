@@ -2,8 +2,8 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\Lift.cs">
     <Files>
+      <File FileName="Assets\Script\Lift.cs" Line="24" Column="1" />
       <File FileName="Assets\Script\GameController.cs" Line="1" Column="1" />
-      <File FileName="Assets\Script\Lift.cs" Line="22" Column="6" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

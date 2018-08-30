@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Lift : MonoBehaviour {
 
-	private bool isEvevatorUp = false;
+	public bool isEvevatorUp = false;
 	private Animator anim;
 
 	public void Start()
@@ -17,12 +17,10 @@ public class Lift : MonoBehaviour {
 		if (!isEvevatorUp)
 		{
 			anim.SetBool ("isRunningUp", true);
-			isEvevatorUp = true;
 		} 
-//		else
-//		{
-//			anim.SetBool ("isRunningUp", false);
-//			isEvevatorUp = false;
-//		}
+		else
+		{
+			anim.SetBool ("isRunningUp", false);
+		}
 	}
 }
