@@ -38,6 +38,11 @@ Global
 		$2.AllowEventAddBlockInline = False
 		$2.AllowEventRemoveBlockInline = False
 		$2.StatementBraceStyle = NextLine
+		$2.ElseNewLinePlacement = NewLine
+		$2.ElseIfNewLinePlacement = DoNotCare
+		$2.CatchNewLinePlacement = NewLine
+		$2.FinallyNewLinePlacement = NewLine
+		$2.WhileNewLinePlacement = NewLine
 		$2.AfterDelegateDeclarationParameterComma = True
 		$2.inheritsSet = Mono
 		$2.inheritsScope = text/x-csharp

@@ -14,7 +14,7 @@ public class Lift : MonoBehaviour {
 
 	public void Update()
 	{
-		if (!isEvevatorUp)
+		if (isEvevatorUp)
 		{
 			anim.SetBool ("isRunningUp", true);
 		} 
@@ -23,4 +23,6 @@ public class Lift : MonoBehaviour {
 			anim.SetBool ("isRunningUp", false);
 		}
 	}
+
+
 }
