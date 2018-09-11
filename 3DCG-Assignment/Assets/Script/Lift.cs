@@ -7,10 +7,9 @@ public class Lift : MonoBehaviour {
 	public bool isEvevatorUp = false;
 	private Animator anim;
 
-	public void Start()
-	{
-		anim = GetComponent<Animator> ();
-	}
+    public void Start() {
+        anim = GetComponent<Animator>();
+    }
 
 	public void Update()
 	{
