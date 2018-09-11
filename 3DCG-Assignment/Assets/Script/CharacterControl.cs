@@ -24,6 +24,14 @@ public class CharacterControl : MonoBehaviour {
 		{
 			Cursor.lockState = CursorLockMode.None;
 		}
+
+		Touch ();
+	}
+
+	void Touch()
+	{
+		Ray ray = new Ray (transform.position + new Vector3(50,0), transform.forward);
+		Debug.DrawRay (ray.origin, ray.direction, Color.blue);
 	}
 
 	//-----------------------------------------------------------------------------------------------------------
