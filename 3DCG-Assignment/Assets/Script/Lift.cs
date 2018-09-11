@@ -13,14 +13,7 @@ public class Lift : MonoBehaviour {
 
 	public void Update()
 	{
-		if (isEvevatorUp)
-		{
-			anim.SetBool ("isRunningUp", true);
-		} 
-		else
-		{
-			anim.SetBool ("isRunningUp", false);
-		}
+        anim.SetBool("isRunningUp", isEvevatorUp);
 	}
 
 	void OnTriggerEnter(Collider col)
