@@ -4,64 +4,87 @@ using UnityEngine;
 
 public class CharacterControl : MonoBehaviour {
 
-	public float inputDelay = 0.1f;
-	public float forwardVelocity = 12;
-	public float rotateVelocity = 100;
-
-	Quaternion targetRotation;
-	Rigidbody rBody;
-	float forwardInput, turnInput;
-
-	public Quaternion TargetRotation
-	{
-		get { return targetRotation; }
-	}
+	public float speed = 10f;
 
 	void Start()
 	{
-		targetRotation = transform.rotation;
-		rBody = GetComponent<Rigidbody> ();
-
-		forwardInput = turnInput = 0;
-	}
-
-	void GetInput()
-	{
-		forwardInput = Input.GetAxis ("Vertical");
-		turnInput = Input.GetAxis ("Horizontal");
+		Cursor.lockState = CursorLockMode.Locked;
 	}
 
 	void Update()
 	{
-		GetInput ();
-		Turn ();
-	}
+		float translation = Input.GetAxis ("Vertical") * speed;
+		float straffe = Input.GetAxis ("Horizontal") * speed;
+		translation *= Time.deltaTime;
+		straffe *= Time.deltaTime;
 
-	void FixedUpdate()
-	{
-		Run ();
-	}
+		transform.Translate (straffe, 0, translation);
 
-	void Run()
-	{
-		if (Mathf.Abs (forwardInput) > inputDelay)
+		if (Input.GetKeyDown ("escape"))
 		{
-			// Move
-			rBody.velocity = transform.forward * forwardInput * forwardVelocity;
-		}
-		else
-		{
-			//Zero Velocity
-			rBody.velocity = Vector3.zero;
+			Cursor.lockState = CursorLockMode.None;
 		}
 	}
 
-	void Turn()
-	{
-		if (Mathf.Abs (turnInput) > inputDelay)
-		{
-			targetRotation *= Quaternion.AngleAxis (rotateVelocity * turnInput * Time.deltaTime, Vector3.up);
-		}
-		transform.rotation = targetRotation;
-	}
+	//-----------------------------------------------------------------------------------------------------------
+//	public float inputDelay = 0.1f;
+//	public float forwardVelocity = 12;
+//	public float rotateVelocity = 100;
+//
+//	Quaternion targetRotation;
+//	Rigidbody rBody;
+//	float forwardInput, turnInput;
+//
+//	public Quaternion TargetRotation
+//	{
+//		get { return targetRotation; }
+//	}
+//
+//	void Start()
+//	{
+//		targetRotation = transform.rotation;
+//		rBody = GetComponent<Rigidbody> ();
+//
+//		forwardInput = turnInput = 0;
+//	}
+//
+//	void GetInput()
+//	{
+//		forwardInput = Input.GetAxis ("Vertical");
+//		turnInput = Input.GetAxis ("Horizontal");
+//	}
+//
+//	void Update()
+//	{
+//		GetInput ();
+//		Turn ();
+//	}
+//
+//	void FixedUpdate()
+//	{
+//		Run ();
+//	}
+//
+//	void Run()
+//	{
+//		if (Mathf.Abs (forwardInput) > inputDelay)
+//		{
+//			// Move
+//			rBody.velocity = transform.forward * forwardInput * forwardVelocity;
+//		}
+//		else
+//		{
+//			//Zero Velocity
+//			rBody.velocity = Vector3.zero;
+//		}
+//	}
+//
+//	void Turn()
+//	{
+//		if (Mathf.Abs (turnInput) > inputDelay)
+//		{
+//			targetRotation *= Quaternion.AngleAxis (rotateVelocity * turnInput * Time.deltaTime, Vector3.up);
+//		}
+//		transform.rotation = targetRotation;
+//	}
 }
