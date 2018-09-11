@@ -8,6 +8,7 @@ public class PlayerLook : MonoBehaviour
     public float mouseSensitivity;
 
     float xAxisClamp = 0.0f;
+	//float rayLength = 100;
 
     void Awake()
     {
@@ -16,7 +17,12 @@ public class PlayerLook : MonoBehaviour
 
     void Update()
     {
-        RotateCamera();       
+        RotateCamera();
+
+		if (Input.GetMouseButtonDown (0))
+		{
+			
+		}
     }
 
     void RotateCamera()

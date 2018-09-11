@@ -24,5 +24,11 @@ public class Lift : MonoBehaviour {
 		}
 	}
 
-
+	void OnTriggerEnter(Collider col)
+	{
+		if (col.tag == "Player")
+		{
+			isEvevatorUp = !isEvevatorUp;
+		}
+	}
 }
