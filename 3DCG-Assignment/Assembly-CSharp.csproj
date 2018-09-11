@@ -53,10 +53,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Script\CameraControl.cs" />
+     <Compile Include="Assets\Script\BackUp\CameraControl.cs" />
      <Compile Include="Assets\Script\CharacterControl.cs" />
+     <Compile Include="Assets\Script\Door.cs" />
      <Compile Include="Assets\Script\GameController.cs" />
      <Compile Include="Assets\Script\Lift.cs" />
+     <Compile Include="Assets\Script\PlayerLook.cs" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>C:/Users/USER/Downloads/APU/UC3F1805CGD/Sms 1/3DCG/Assignment/3DCG-Assignment/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
