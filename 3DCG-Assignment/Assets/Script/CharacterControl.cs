@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class CharacterControl : MonoBehaviour {
 
 	public float speed = 10f;
+	public Lift lift;
 
 	void Start()
 	{
@@ -25,13 +27,24 @@ public class CharacterControl : MonoBehaviour {
 			Cursor.lockState = CursorLockMode.None;
 		}
 
+
 		Touch ();
+
 	}
+
+	//float rayLength = 100;
+	//public LayerMask layerMask;
 
 	void Touch()
 	{
-		Ray ray = new Ray (transform.position + new Vector3(50,0), transform.forward);
-		Debug.DrawRay (ray.origin, ray.direction, Color.blue);
+		RaycastHit hit;
+		Vector3 forward = transform.TransformDirection (Vector3.forward) * 100;
+		Debug.DrawRay (transform.position, forward, Color.blue);
+
+		if (Physics.Raycast (transform.position, (forward), out hit))
+		{
+			//lift.isEvevatorUp = !lift.isEvevatorUp;
+		}
 	}
 
 	//-----------------------------------------------------------------------------------------------------------
