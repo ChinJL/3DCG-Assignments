@@ -26,18 +26,18 @@ fn DialogCallback =
 pluginManager.loadClass FBXIMP;
 pluginManager.loadClass FBXEXP;
 
-openLog "C:/Users/kishe/OneDrive/DOCUME~1/3DCG-A~1/3DCG-A~1/Temp/3dsMax.log" mode:"w"
+openLog "F:/Documents/1. Uni Stuff/UC3F1804CGD - Degree in Computer Games Development Year 3/Semester 1/3DCG/Assignment/3DCG-Assignment/Temp/3dsMax.log" mode:"w"
 print "Start of log file."; flushLog();
 while true do
 (	
-	if ( fileExists "C:/Users/kishe/OneDrive/DOCUME~1/3DCG-A~1/3DCG-A~1/Temp/MaxCommandPipe" ) then
+	if ( fileExists "F:/Documents/1. Uni Stuff/UC3F1804CGD - Degree in Computer Games Development Year 3/Semester 1/3DCG/Assignment/3DCG-Assignment/Temp/MaxCommandPipe" ) then
 	(
 		exportNormals = false;
 		exportTangents = false;
 		bakeAnimations = false;
 		useFileUnits = false;
 	
-		waitpipe = (openFile "C:/Users/kishe/OneDrive/DOCUME~1/3DCG-A~1/3DCG-A~1/Temp/MaxCommandPipe" mode:"r");
+		waitpipe = (openFile "F:/Documents/1. Uni Stuff/UC3F1804CGD - Degree in Computer Games Development Year 3/Semester 1/3DCG/Assignment/3DCG-Assignment/Temp/MaxCommandPipe" mode:"r");
 		filename = (readLine waitpipe);
 		fbxFilename = (readline waitpipe);
 		
@@ -154,7 +154,7 @@ while true do
 					print "After fbx export"; flushLog();
 				)
 
-				deleteFile "C:/Users/kishe/OneDrive/DOCUME~1/3DCG-A~1/3DCG-A~1/Temp/MaxCommandPipe";
+				deleteFile "F:/Documents/1. Uni Stuff/UC3F1804CGD - Degree in Computer Games Development Year 3/Semester 1/3DCG/Assignment/3DCG-Assignment/Temp/MaxCommandPipe";
 				print "Finished max loading and fbx conversion"; flushLog();
 			) -- with defaultAction
 		)
